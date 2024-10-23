@@ -1,0 +1,131 @@
+@use "vars" as *;
+
+
+
+.sec-sns{
+	padding: 100px 0;
+}
+.sns-block{
+	@include flex(0,0,wrap);
+	margin-bottom: 100px;
+	&__ct{
+		width: 50%;
+		padding: 0 80px 0 0;
+		@include fts(18,28);
+		color: #161C2D;
+		&-iframe{
+			margin-bottom: 30px;
+		}
+		&-ttl{
+			display: block;
+			@include font-size(28);
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		p{
+			margin-bottom: 20px;
+		}
+		&-box{
+			&-price{
+				display: block;
+				@include font-size(21);
+				font-weight: 500;
+			}
+			&-note{
+				display: block;
+				font-weight: 500;
+				color: #609BDF;
+				font-style: italic;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__img{
+		width: 50%;
+		border-radius: 28px;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+		&--zoom{
+			border: 1px solid #464646;
+		}
+	}
+	&--event{
+		.sns-block{
+			&__ct{
+				order: 2;
+				padding: 0 0 0 80px;
+			}
+			&__img{
+				order: 1;
+				border: none;
+			}
+		}
+	}
+}
+.sns-cmt{
+	@include flex(0,0,wrap);
+	margin: 0 -40px;
+	&__item{
+		width: 33.333%;
+		padding: 0 40px;
+		&--center{
+			transform: scale(1.25);
+			.sns-cmt__box{
+				box-shadow: 0 0 18px 0 rgba(black,0.09);
+			}
+		}
+	}
+	&__box{
+		border: 1px solid rgba(black,0.2);
+		border-radius: 15px;
+		@include flex(0,0,wrap);
+		padding: 15px;
+		&-img{
+			width: 50px;
+		}
+		&-ct{
+			width: calc(100% - 50px);
+			padding: 0 0 0 15px;
+			@include fts(11,15.2);
+			&-name{
+				display: block;
+				@include font-size(17);
+				color: black;
+				font-weight: 600;
+			}
+			&-note{
+				display: block;
+				@include font-size(12);
+				color: #707070;
+				margin-bottom: 15px;
+			}
+			p{
+				margin-bottom: 15px;
+			}
+			&-start{
+				@include flex(0,0,wrap);
+				.sns-start{
+					display: block;
+					width: 24px;
+					height: 24px;
+					margin: 0 2px;
+					background: url("../img/top/star.png")no-repeat;
+					background-size: 100%;
+					&:nth-child(1){
+						margin-left: 0;
+					}
+					&--halt{
+						display: block;
+						width: 24px;
+						height: 24px;
+						margin: 0 2px;
+						background: url("../img/top/star-half.png")no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
+}

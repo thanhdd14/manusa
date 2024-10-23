@@ -1,0 +1,47 @@
+@use "vars" as *;
+
+.base-news{
+	img{
+		max-width: 100%;
+	}
+}
+.c-ft{
+	&--montserrat{
+		font-family: $font-Montserrat;
+	}
+}
+
+.inner{
+	width: 100%;
+	max-width: 1346px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.c-bg{
+	&--gray{
+		background: #FAFAFB;
+	}
+}
+
+.c-btn{
+	&__01{
+		width: 100%;
+		max-width: 173px;
+		height: 48px;
+		@include flex(center,center,wrap);
+		text-align: center;
+		@include font-size(16);
+		font-family: $font-Montserrat;
+		line-height: 1;
+		color: white;
+		border-radius: 10px;
+		background: black;
+		border: 1px solid black;
+		@include smooth-transition;
+		&:hover{
+			background: white;
+			color: black;
+		}
+	}
+}
