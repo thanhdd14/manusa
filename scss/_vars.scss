@@ -109,7 +109,7 @@ $breakpoint-lg: 990px !default;
 $breakpoints: (
 		'xs': 'screen and (max-width: 374px)',
 		'sm': 'screen and (max-width: 640px)',
-		'md': 'screen and (max-width: 834px)',
+		'md': 'screen and (max-width: 768px)',
 		'lg': 'screen and (max-width: 990px)',
 		'tb': 'screen and (max-width: 1024px)',
 		'xl': 'screen and (max-width: 1245px)',
@@ -117,7 +117,7 @@ $breakpoints: (
 		'mac': 'screen and (max-width: 1770px)',
 		'xs-min': 'screen and (min-width: 375px)',
 		'sm-min': 'screen and (min-width: 641px)',
-		'md-min': 'screen and (min-width: 835px)',
+		'md-min': 'screen and (min-width: 769px)',
 		'lg-min': 'screen and (min-width: 991px)',
 		'tb-min': 'screen and (min-width: 1025px)',
 		'xl-min': 'screen and (min-width: 1246px)',
@@ -229,134 +229,6 @@ $breakpoints: (
 	}
 }
 
-@mixin ft-awesome($no){// content:'\f02b';
-	content: #{'"' + $no + '"'};
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	@if $no == arrow-l { // arrow-left
-		content: '\f060';
-	} @else if $no == arrow-r { // arrow-right
-		content: '\f061';
-	} @else if $no == c-up { // chevron-up
-		content: '\f077';
-	} @else if $no == c-down { // chevron-down
-		content: '\f078';
-	} @else if $no == c-left { // chevron-left = "＜"
-		content: '\f053';
-	} @else if $no == c-right { // chevron-right = "＞"
-		content: '\f054';
-	}
-}
-
-
-/* ====================================================
-画像などを縦横比を維持したままレスポンシブ対応
-*画像やGoogle Map、YouTubeの埋め込みなどを縦横比を維持したままレスポンシブ対応
-.photo {
-  // 画像を16:9にトリミングして縦横比を常に保つ
-  @include aspect-ratio(16, 9);
-
-  & > .image {
-    @include object-fit(cover);
-  }
-}
-==================================================== */
-@mixin aspect-ratio($width, $height) {
-	position: relative;
-
-	&::before {
-		content: '';
-		float: left;
-		padding-top: ($height / $width) * 100%;
-	}
-
-	&::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-
-	& > :first-child {
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-}
-
-
-
-//marginPC and SP
-//@for $i from 1 through 100 {
-//	@include mq(md-min){
-//		.mbpc-#{$i} {
-//			margin-bottom: $i + px !important;
-//		}
-//	}
-//	@include mq(){
-//		.mbsp-#{$i} {
-//			margin-bottom: $i + px !important;
-//		}
-//	}
-//}
-//.mb0{
-//	margin-bottom: 0 !important;
-//}
-
-
-//====================================================
-//Pseudo-elements setting
-//====================================================
-@mixin p-before($w, $h) {
-	&:before {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		width: $w;
-		height: $h;
-		@content;
-	}
-}
-
-@mixin p-after($w, $h) {
-	&:after {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		width: $w;
-		height: $h;
-		@content;
-	}
-}
-
-
-//====================================================
-//min(), max(), clamp()  setting
-//====================================================
-@function c-max-size($max, $size){
-	@return unquote('max(' + $max + ', ' + $size + ')');
-}
-
-@function c-max-sizeCalc($max, $size, $viewWidth:834){
-	$division: ($size / $viewWidth) * 100;
-	@return unquote('max(' + $max + ', ' + #{$division}vw + ')');
-}
-
-
-
-@function c-min-size($min, $size){
-	@return unquote('min(' + $min + ', ' + $size + ')');
-}
-
-//最小幅が200px、推奨幅が50%、最大幅が1000px
-//width: clamp(200px, 50%, 1000px);
-//幅は200pxを下回ることはありません。
-//中央の値（推奨値）は50%で、ビューポート(1150pxの場合)の幅が400px以上2000px未満の場合のみ機能します。
-//幅は1000pxを超えません。
-@function c-clamp($min, $recom, $max){
-	@return unquote('clamp(' + $min + ', ' + $recom + ', ' + $max + ')');
-}
 
 
 
