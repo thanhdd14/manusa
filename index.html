@@ -12,6 +12,7 @@
 		
 		<link type="text/css" rel="stylesheet" href="./css/theme.css">
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="./css/colorbox.css">
 		<link type="text/css" rel="stylesheet" href="./css/news-style.css">
 	</head>
 	<body>
@@ -44,12 +45,33 @@
 							<ul class="js-sns-block">
 								<li class="js-sns-block__item">
 									<img src="./img/top/img-01.png" alt="BLOW DRYER">
+									<a href="./img/top/img-01.png" class="js-zoom">
+										<svg role="presentation" fill="none" stroke-width="2" focusable="false" width="15" height="15" class="icon icon-image-zoom" viewBox="0 0 15 15">
+											<circle cx="7.067" cy="7.067" r="6.067" stroke="currentColor"></circle>
+											<path d="M11.4 11.4 14 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M7 4v6M4 7h6" stroke="currentColor"></path>
+										</svg>
+									</a>
 								</li>
 								<li class="js-sns-block__item">
-									<img src="./img/top/img-01.png" alt="BLOW DRYER">
+									<img src="./img/top/img-02.png" alt="BLOW DRYER">
+									<a href="./img/top/img-02.png" class="js-zoom">
+										<svg role="presentation" fill="none" stroke-width="2" focusable="false" width="15" height="15" class="icon icon-image-zoom" viewBox="0 0 15 15">
+											<circle cx="7.067" cy="7.067" r="6.067" stroke="currentColor"></circle>
+											<path d="M11.4 11.4 14 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M7 4v6M4 7h6" stroke="currentColor"></path>
+										</svg>
+									</a>
 								</li>
 								<li class="js-sns-block__item">
-									<img src="./img/top/img-01.png" alt="BLOW DRYER">
+									<img src="./img/top/img-03.png" alt="BLOW DRYER">
+									<a href="./img/top/img-03.png" class="js-zoom">
+										<svg role="presentation" fill="none" stroke-width="2" focusable="false" width="15" height="15" class="icon icon-image-zoom" viewBox="0 0 15 15">
+											<circle cx="7.067" cy="7.067" r="6.067" stroke="currentColor"></circle>
+											<path d="M11.4 11.4 14 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M7 4v6M4 7h6" stroke="currentColor"></path>
+										</svg>
+									</a>
 								</li>
 							</ul>
 							
@@ -415,6 +437,7 @@
 		
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.colorbox.js"></script>
 		<script>
 			$('.js-sns-block').slick({
 			    dots: true,
@@ -423,8 +446,11 @@
 			    infinite: true,
 			    speed: 500,
 			    fade: true,
-			    autoplay: true,
+			    autoplay: false,
 			    cssEase: 'linear'
+			});
+			$(document).ready(function(){
+				$(".js-zoom").colorbox({rel:'js-zoom'});
 			});
 		</script>
 	</body>

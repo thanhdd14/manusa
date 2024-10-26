@@ -116,6 +116,19 @@
 				}
 			}
 		}
+		.js-sns-block__item{
+			position: relative;
+			.js-zoom{
+				@include flex(center,center);
+				width: 65px;
+				height: 65px;
+				border-radius: 50%;
+				position: absolute;
+				bottom: 6%;
+				right: 6%;
+				background: #ccc;
+			}
+		}
 	}
 	.sns-cmt{
 		@include flex(0,0,wrap);
@@ -387,6 +400,167 @@
 			height: 676px;
 			@include mq(){
 				height: 51vw;
+			}
+		}
+	}
+}
+
+div#cboxOverlay {
+	background: #f1f0f0;
+	opacity: 1 !important;
+	&:after{
+		content: "";
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+		background: white url("../img/top/close.png")no-repeat;
+		background-size: 12px;
+		background-position: center;
+		transition: transform .2s;
+		@include mq(){
+			top: 20px;
+			right: 20px;
+		}
+	}
+	&:hover{
+		&:after{
+			transform: rotate(90deg);
+		}
+	}
+}
+#colorbox{
+	//@include mq(){
+	//	width: 100% !important;
+	//	height: 100vh !important;
+	//	#cboxWrapper,#cboxContent,#cboxLoadedContent{
+	//		width: 100% !important;
+	//		height: 100vh !important;
+	//	}
+	//}
+	#cboxMiddleLeft,#cboxMiddleRight{
+		display: none !important;
+	}
+	#cboxLoadedContent{
+		border-radius: 40px !important;
+		overflow: hidden !important;
+		margin-bottom: 0;
+		@include mq(){
+			border-radius: 15px !important;
+		}
+	}
+	.cboxPhoto{
+		@include mq(md-min){
+			width: auto !important;
+			height: 90vh !important;
+			border-radius: 40px !important;
+		}
+		@include mq(){
+			width: 100vw !important;
+			height: auto !important;
+		}
+	}
+	#cboxContent{
+		position: relative;
+		@include flex(center,center);
+		background: none;
+		@include mq(){
+			padding:  100px 0;
+		}
+	}
+	#cboxCurrent {
+		@include flex(center,center);
+		width: 147px;
+		height: 47px;
+		border-radius: 50px;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		bottom: 30px;
+		text-align: center;
+		border: 1px solid #ccc;
+		background: #f1f0f0;
+		color: #161C2D;
+		@include mq(){
+			bottom: 0;
+		}
+	}
+	#cboxPrevious{
+		width: 50px;
+		height: 46px;
+		background: none;
+		@include flex(center,center);
+		left: calc(50% - 75px);
+		bottom: 30px;
+		@include mq(){
+			bottom: 0;
+		}
+		&:before{
+			content: "";
+			border: solid #161C2D;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			transform: rotate(135deg);
+			@include smooth-transition;
+			position: relative;
+		}
+		&:after{
+			content: "";
+			width: 0;
+			height: 2px;
+			background: #161C2D;
+			position: absolute;
+			left: 20px;
+			@include smooth-transition;
+		}
+		&:hover{
+			&:before{
+				left: -2px;
+			}
+			&:after{
+				width: 10px;
+			}
+		}
+	}
+	#cboxNext{
+		width: 50px;
+		height: 46px;
+		background: none;
+		@include flex(center,center);
+		right: calc(50% - 75px);
+		left: auto;
+		bottom: 30px;
+		@include mq(){
+			bottom: 0;
+		}
+		&:before{
+			content: "";
+			border: solid #161C2D;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			transform: rotate(-45deg);
+			@include smooth-transition;
+			position: relative;
+		}
+		&:after{
+			content: "";
+			width: 0;
+			height: 2px;
+			background: #161C2D;
+			position: absolute;
+			right: 20px;
+			@include smooth-transition;
+		}
+		&:hover{
+			&:before{
+				right: -2px;
+			}
+			&:after{
+				width: 10px;
 			}
 		}
 	}
