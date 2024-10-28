@@ -110,6 +110,17 @@ Media Quary
     margin-bottom: 20px;
   }
 }
+.ocym-sec-sns .sns-block__ct-iframe-ttl {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 26px;
+}
+@media screen and (max-width: 640px) {
+  .ocym-sec-sns .sns-block__ct-iframe-ttl {
+    text-align: left;
+  }
+}
 .ocym-sec-sns .sns-block__ct-ttl {
   display: block;
   font-size: 28px;
