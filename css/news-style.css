@@ -42,6 +42,7 @@ Media Quary
   flex-wrap: wrap;
   text-align: center;
   font-size: 16px;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
   color: white;
@@ -126,7 +127,7 @@ Media Quary
 .ocym-sec-sns .sns-block__ct-box-price {
   display: block;
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .ocym-sec-sns .sns-block__ct-box-note {
   display: block;
