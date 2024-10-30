@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="format-detection" content="telephone=no">
+	
+	
+	<link type="text/css" rel="stylesheet" href="./css/theme.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link type="text/css" rel="stylesheet" href="./css/colorbox.css">
+	<link type="text/css" rel="stylesheet" href="./css/news-style.css">
+</head>
+<body>
+
+<main id="tab-section">
+	<section class="ocym-sec-tab-section">
+		<div class="inner">
+			<h1 class="ocym-sec-tab__ttl">Treatments & Styling</h1>
+			<div class="tab-section--scroll">
+				<ul class="tab-section">
+					<li class="active">EMS</li>
+					<li>Red Light Therapy</li>
+					<li>Infrared</li>
+					<li>Ionic</li>
+				</ul>
+			</div>
+			
+			<div class="tab-section-content">
+				<div class="tab-section-content__item active">
+					<div class="tab-section__block">
+						<div class="tab-section__block-item">
+							<dl>
+								<dt>
+									The technology
+								</dt>
+								<dd>
+									
+									<p>
+										EMS technology devices use low-frequency electrical impulses to stimulate nerves. With the nerves are engaged, they send a message to the brain to engage surrounding muscle fibers, causing them to expand and contract. Just like a great workout, these contractions strengthen and build muscles to perform their best.
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									Found in
+								</dt>
+								<dd>
+									<p>
+										Medi Lift Essential Mask
+									</p>
+								</dd>
+							</dl>
+						</div>
+						<div class="tab-section__block-item">
+							<dl>
+								<dt>
+									Helps
+								</dt>
+								<dd>
+									<ul class="tab-section__help">
+										<li>
+											<span class="tab-section__help-icon tab-section__help-icon--01"><img src="./img/tab-section/icon-tab-01.png" alt="Lifts cheeks" ></span>
+											<p>Lifts cheeks</p>
+										</li>
+										<li>
+											<span class="tab-section__help-icon tab-section__help-icon--02"><img src="./img/tab-section/icon-tab-02.png" alt="Contours jawline" ></span>
+											<p>Contours jawline</p>
+										</li>
+										<li>
+											<span class="tab-section__help-icon tab-section__help-icon--03"><img src="./img/tab-section/icon-tab-03.png" alt="Tightens muscle tone"></span>
+											<p>Tightens muscle tone</p>
+										</li>
+										<li>
+											<span class="tab-section__help-icon tab-section__help-icon--04"><img src="./img/tab-section/icon-tab-04.png" alt="Boosts microcirculation" ></span>
+											<p>Boosts microcirculation</p>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="tab-section-content__item">
+					2
+				</div>
+				<div class="tab-section-content__item">
+					3
+				</div>
+				<div class="tab-section-content__item">
+					4
+				</div>
+			</div>
+		</div>
+	
+	</section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="./js/jquery.colorbox.js"></script>
+<script>
+	$(function () {
+		$(".tab-section li").click(function () {
+			var num = $(".tab-section li").index(this);
+			$(".tab-section-content .tab-section-content__item").removeClass('active');
+			$(".tab-section-content .tab-section-content__item").eq(num).addClass('active');
+			$(".tab-section li").removeClass('active');
+			$(this).addClass('active')
+		});
+	});
+</script>
+</body>
+</html>
